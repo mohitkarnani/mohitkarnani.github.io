@@ -116,7 +116,7 @@
                 <p>$\LaTeX$ test:</p>
 		<p>\begin{align*}
 \int_{y\in Y} \left[ u(\bar{y})+u'(\bar{y})(y-\bar{y})+\frac{1}{2}u''(\bar{y})(y-\bar{y})^2 \right] f(y) dy &\simeq u(\bar{y})+u'(\bar{y})(0-\bar{y}) \\
-\underline{u(\bar{y})}+u'(\bar{y})\underbrace{\underbrace{\int_{y\in Y}yf(y)dy}_{\mathbb{E}(y)=\bar{y}}-u'(\bar{y})\bar{y}}_{=0}+\frac{1}{2}u''(\bar{y})\underbrace{\int_{y\in Y}(y-\bar{y})^2 f(y) dy}_{\mathbb{V}(y)=\sigma_y^2} &\simeq \underline{u(\bar{y})}-u'(\bar{y})\bar{y} \\
+\underline{u(\bar{y})}+\underbrace{u'(\bar{y})\underbrace{\int_{y\in Y}yf(y)dy}_{\mathbb{E}(y)=\bar{y}}-u'(\bar{y})\bar{y}}_{=0}+\frac{1}{2}u''(\bar{y})\underbrace{\int_{y\in Y}(y-\bar{y})^2 f(y) dy}_{\mathbb{V}(y)=\sigma_y^2} &\simeq \underline{u(\bar{y})}-u'(\bar{y})\bar{y} \\
 \frac{1}{2}u''(\bar{y})\sigma_y^2 &\simeq-u'(\bar{y})\bar{y} \\
 \implies\bar{y} &\simeq \sqrt{\frac{\rho}{2}}\sigma_y.
 \end{align*}</p>
