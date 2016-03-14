@@ -114,12 +114,14 @@
 
 <input class="bpauta" type="button" value="Respuesta" onclick="this.value=this.value=='Respuesta'?'Esconder':'Respuesta';">
 <div class="pauta"><div>
-<p>Notar que una función $f$ es estrictamente creciente si y solo si $x_1>x_2\iff f(x_1)>f(x_2)\forall x$. Sin pérdida de generalidad, suponga que $\Delta x>0$, de modo que $x-\Delta x < x$. Si $f$ fuera estrictamente creciente, entonces esto implicaría que $f(x-\Delta x) < f(x)$, por lo que la tasa sería negativa. Lo contrario pasaría si $f$ fuera estrictamente decreciente.
+<p>En efecto, podemos utilizar un 1 conveniente en el exponente y obtener $\displaystyle \lim_{x\to 0} \dfrac{(1+ax)^{\frac{ax}{ax}\cdot a}-1}{x}$. Luego, como $x\to 0\implies ax\to 0$ podemos utilizar el límite conocido $\displaystyle \lim_{ax\to 0} (1+ax)^{\frac{1}{ax}}=e$ para obtener $\displaystyle \lim_{x\to 0} \dfrac{\exp(a^2x)-1}{x}$.
 <br>
-Por lo tanto la tasa $\dfrac{f(x-\Delta x)-f(x)}{\Delta x}$ sí sirve para determinar si la función es creciente, pues basta con verificar que sea negativa.</p>
+Ahora bien, sea $y=\exp(a^2x)-1$, de modo que $x\to 0\implies y\to 0$. Despejando tenemos que $x=\dfrac{\ln(y+1)}{a^2}$. Así, redefinimos el límite como $\displaystyle \lim_{y\to 0} \dfrac{y}{\dfrac{\ln(y+1)}{a^2}}=\displaystyle \lim_{y\to 0} \dfrac{a^2}{\dfrac{\ln(y+1)}{y}}$. Usando el límite conocido $\displaystyle \lim_{y\to 0} \dfrac{\ln(y+1)}{y}=1$ obtenemos la respuesta.
+<br>
+Por lo tanto, $\displaystyle \lim_{x\to 0} \dfrac{(1+ax)^{a}-1}{x}=a^2. \qquad\square$</p>
 </div></div>
 
-<iframe src="https://docs.google.com/a/fen.uchile.cl/forms/d/1LYsYbTXFP4CVC0y-Ao-fcnB05ywXkHoc2T_vmqhwW2Y/viewform?embedded=true" width="760" height="1024" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+<iframe src="https://docs.google.com/forms/d/1vXtpY2cw3vIjuMQij6ZBgjPYc1RjSnxhpwidb56J2q8/viewform?embedded=true" width="760" height="1024" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- personal -->
