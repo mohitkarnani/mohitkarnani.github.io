@@ -1,0 +1,111 @@
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    height: 100%;
+    width: 100%;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Dark gray text color */
+    overflow: hidden;
+}
+
+/* Terminal Styling */
+.terminal {
+    width: 80%;
+    max-width: 800px;
+    height: 90vh; /* Fixed height for terminal */
+    margin: 50px auto;
+    padding: 0;
+    background-color: #f2f3f5; /* Lighter background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 10px; /* Increased border radius for macOS look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Improved shadow */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+/* Terminal Header */
+.terminal-header {
+    display: flex;
+    justify-content: center; /* Center the header text */
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #e6e6e6; /* Slightly darker header */
+    color: #333; /* Dark text for header */
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative; /* For positioning buttons */
+}
+
+/* Output Area */
+.terminal-output {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #fff; /* White background for output area */
+    box-sizing: border-box; /* Include padding in the height calculation */
+    color: #333; /* Dark gray text color */
+    border-bottom: 1px solid #ccc;
+    overflow-y: auto; /* Scroll if content overflows */
+    font-family: monospace;
+}
+
+/* Command History */
+.terminal-history {
+    white-space: pre-wrap;
+    color: #333; /* Dark gray text color for command history */
+}
+
+/* Input Area */
+.terminal-input {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in the height calculation */
+}
+
+.terminal-input input {
+    background: transparent;
+    border: none;
+    color: #333; /* Dark gray text color */
+    outline: none;
+    flex: 1;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+}
+
+.terminal-input span {
+    color: #333; /* Dark gray prompt color */
+}
+
+.preformatted {
+    font-family: monospace;
+    /*white-space: pre;*/
+}
+
+a:link {
+    text-decoration: none;
+    color: blue;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: blue;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: blue;
+  }
+  
+  a:active {
+    text-decoration: none;
+    color: blue;
+  }
