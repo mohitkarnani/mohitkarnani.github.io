@@ -14,8 +14,8 @@ body, html {
 .terminal {
     width: 80%;
     max-width: 800px;
-    height: 90vh; /* Fixed height for terminal */
-    margin: 30px auto;
+    height: 95vh; /* Fixed height for terminal */
+    margin: 20px auto;
     padding: 0;
     background-color: #f2f3f5; /* Lighter background */
     border: 1px solid #ccc; /* Light gray border */
