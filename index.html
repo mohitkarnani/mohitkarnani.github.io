@@ -1,479 +1,589 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Mohit Karnani's Personal Web Site">
-    <meta name="author" content="Mohit Karnani">
-
-    <title>Mohit Karnani - Personal Page</title>
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohit Karnani</title>
+<meta name="description" content="Mohit Karnani is an economist working on development and market design. Postdoctoral researcher at Harvard, PhD MIT. Job market paper, research papers, CV.">
+<meta name="author" content="Mohit Karnani">
+<meta name="color-scheme" content="light">
 <meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://karnani.cl/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Roboto+Serif:wght@400;500&display=swap">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<meta property="og:title" content="Mohit Karnani">
+<meta property="og:description" content="Economist. Development and market design. Postdoctoral researcher at Harvard, PhD MIT.">
+<meta property="og:url" content="https://karnani.cl/">
+<script>
+  // apply a theme chosen earlier in this tab before anything paints
+  try { var t = sessionStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<style>
+/* palette borrowed from economics.mit.edu: slate text, MIT red, their blue for labels */
+:root {
+  color-scheme: light;
+  --paper: #ffffff;
+  --ink: #223d4a;
+  --ink-2: #2f4a58;
+  --muted: #5a6e79;
+  --rule: #dedbd6;
+  --blue: #1a7fa8;
+  --red: #951529;
+  --cta: #bc2727;
+}
+/* dark, only when asked for with the switch. The background is the slate MIT uses for its dark bands. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #223d4a;
+  --ink: #ffffff;
+  --ink-2: #e2e9ec;
+  --muted: #b5c4cb;
+  --rule: #3b5664;
+  --blue: #8ccfe8;
+  --red: #f4a3ab;
+  --cta: #f08a93;
+}
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+/* type: Nunito Sans for text and Roboto Serif for headings, as on the MIT Economics site */
+html {
+  background: var(--paper);
+  color: var(--ink);
+  font: 300 1.0625rem/1.55 "Nunito Sans", NunitoSans, "Segoe UI", Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body { margin: 0; padding: 2.75rem 1.25rem 4rem; }
+.page { position: relative; max-width: 36rem; margin: 0 auto; }
 
-    <link href="css/grayscale.css" rel="stylesheet">
+h1, h3 { font-family: "Roboto Serif", Georgia, serif; }
+h1 {
+  font-size: 1.85rem;
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0 0 .9rem;
+}
+h2 {
+  font-size: .82rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--blue);
+  margin: 0 0 1.1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+}
+h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.35;
+  margin: 0;
+}
+p { margin: 0 0 1rem; }
+ul { margin: 0; padding: 0; list-style: none; }
+cite { font-style: italic; }
+b, strong { font-weight: 700; }
 
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="academicons/css/academicons.css" />
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .15em;
+  overflow-wrap: anywhere;
+}
+p a { font-weight: 400; }
+a:hover { color: var(--blue); }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 1px; }
 
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+.skip {
+  position: absolute; left: 1rem; top: -3rem;
+  background: var(--paper); padding: .4rem .7rem; border: 1px solid var(--rule);
+}
+.skip:focus { top: 1rem; }
+.vh {
+  position: absolute; width: 1px; height: 1px; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
 
-	<script type="text/x-mathjax-config">
-	MathJax.Hub.Config({
-  		tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-	});
-	</script>
-	<script type="text/javascript"
-  		src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-	</script>
+/* light/dark switch, top right */
+.theme {
+  position: absolute;
+  top: -.3rem;
+  right: -.5rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+}
+.theme:hover { color: var(--blue); }
+.theme svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.theme .sun, .theme.dark .moon { display: none; }
+.theme.dark .sun { display: block; }
+html:not(.js) .theme { display: none; }
+
+/* header */
+.role { margin: 0; color: var(--ink-2); }
+.market { margin: .3rem 0 0; color: var(--red); font-weight: 600; }
+.links { margin: 1.2rem 0 1.8rem; align-items: center; }
+.links, .bar, .nav { display: flex; flex-wrap: wrap; }
+.links a, .bar a, .nav a { white-space: nowrap; font-weight: 600; }
+.links a:not(:last-child)::after, .bar a:not(:last-child)::after, .nav a:not(:last-child)::after {
+  content: "\00b7";
+  content: "\00b7" / "";
+  display: inline-block;
+  margin: 0 .55em;
+  color: var(--muted);
+  font-weight: 300;
+}
+/* the CV link echoes the outlined button on the MIT page */
+.links .cv {
+  border: 2px solid var(--cta);
+  color: var(--cta);
+  padding: .4rem 1rem;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+.links a.cv::after { content: none; }
+.links .cv:hover { background: var(--cta); color: var(--paper); }
+.fields { color: var(--muted); font-size: .95rem; margin-top: 1.25rem; }
+.nav { font-size: .88rem; margin: 1.4rem 0 0; }
+.nav a { text-decoration: none; color: var(--ink-2); }
+.nav a:hover { color: var(--blue); }
+
+/* papers */
+section { margin-top: 2.6rem; }
+section, .paper { scroll-margin-top: 1.25rem; }
+.paper + .paper { margin-top: 1.7rem; }
+.paper h3 a { text-decoration-color: var(--rule); }
+.paper h3 a:hover { text-decoration-color: currentColor; }
+.jmp h3 { font-size: 1.32rem; font-weight: 500; line-height: 1.3; }
+.by, .where {
+  margin: .25rem 0 0;
+  font-size: .93rem;
+  font-weight: 400;
+  color: var(--ink-2);
+}
+.by { color: var(--muted); }
+.lede { font-style: italic; font-weight: 400; margin: .8rem 0 .2rem; }
+.tools {
+  font-size: .86rem;
+  font-weight: 400;
+  color: var(--muted);
+  text-align: right;
+  margin: 0 0 .9rem;
+}
+.tools button {
+  font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer;
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .15em;
+}
+.tools button:hover { color: var(--blue); }
+html:not(.js) .tools { display: none; }
+
+/* abstracts */
+.abs { margin-top: .4rem; }
+.abs summary {
+  display: inline-block;
+  cursor: pointer;
+  list-style: none;
+  font-size: .8rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--muted);
+  padding: .25rem 0;
+}
+.abs summary::-webkit-details-marker { display: none; }
+.abs summary::before {
+  content: "\25B8";
+  display: inline-block;
+  width: 1.1em;
+  font-size: .95em;
+  transition: transform .18s ease;
+}
+.abs[open] summary::before { transform: rotate(90deg); }
+.abs summary:hover { color: var(--blue); }
+.abs > div {
+  font-size: .95rem;
+  line-height: 1.58;
+  color: var(--ink-2);
+  padding: .3rem 0 .2rem;
+}
+.abs > div p:last-child { margin-bottom: 0; }
+.abs[open] > div { animation: reveal .25s ease-out; }
+@keyframes reveal { from { opacity: 0; transform: translateY(-4px); } }
+
+/* dated lists: teaching, awards. Years stack above the entry on phones, sit in a column otherwise */
+.dated li { margin-bottom: .7rem; font-weight: 400; }
+.dated .yr {
+  display: block;
+  color: var(--muted);
+  font-size: .88rem;
+  font-variant-numeric: tabular-nums;
+}
+.dated small { display: block; color: var(--muted); font-size: .9rem; }
+@media (min-width: 40em) {
+  .dated li { display: grid; grid-template-columns: 5.2rem 1fr; column-gap: .75rem; margin-bottom: .55rem; }
+  .dated .yr { font-size: .93rem; padding-top: .05rem; }
+}
+
+.refs li { margin-bottom: .7rem; font-weight: 400; }
+.refs .aff { display: block; color: var(--muted); font-size: .93rem; }
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+  font-size: .93rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+footer p { margin: 0 0 .35rem; }
+
+/* wide screens: section labels move into the left margin */
+@media (min-width: 60em) {
+  html { font-size: 1.125rem; }
+  body { padding-top: 4.5rem; }
+  .page { max-width: 47.5rem; }
+  h1 { font-size: 2.3rem; }
+  header, section, footer { display: grid; grid-template-columns: 9rem minmax(0, 1fr); column-gap: 2.5rem; }
+  header > *, section > div, footer > * { grid-column: 2; }
+  section { margin-top: 3.4rem; }
+  section > h2 {
+    grid-column: 1;
+    border: 0;
+    padding: .35rem 0 0;
+    margin: 0;
+    position: sticky;
+    top: 1.5rem;
+    align-self: start;
+    text-align: right;
+  }
+  footer { border: 0; padding-top: 0; }
+  footer > p:first-child { border-top: 1px solid var(--rule); padding-top: 1.1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .abs summary::before { transition: none; }
+  .abs[open] > div { animation: none; }
+}
+
+@media print {
+  html { font-size: 10.5pt; background: #fff; color: #000; }
+  /* print in ink whatever the screen theme was */
+  body { padding: 0; --ink: #000; --ink-2: #222; --muted: #555; --rule: #bbb; --blue: #1a7fa8; --red: #951529; --cta: #951529; }
+  a { text-decoration: none; color: inherit; }
+  .skip, .nav, .tools, .theme { display: none; }
+  .abs summary::before { content: ""; }
+  .abs[open] > div { animation: none; }
+  h2, h3 { break-after: avoid; }
+  .dated li { break-inside: avoid; }
+  p { orphans: 3; widows: 3; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#jmp">Skip to research</a>
+<div class="page">
+
+<button type="button" class="theme" id="theme" aria-label="Switch to dark mode">
+  <svg class="moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
+  <svg class="sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.3M12 19.2v2.3M2.5 12h2.3M19.2 12h2.3M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+</button>
+
+<header>
+  <h1>Mohit Karnani</h1>
+  <p class="role">Postdoctoral Researcher, Harvard University<br>PhD in Economics and Statistics, MIT</p>
+  <p class="market">On the 2026&ndash;27 academic job market</p>
+  <p class="links">
+    <a class="cv" href="downloads/Karnani_CV.pdf">Download CV<span class="vh"> (PDF)</span></a>
+    <!--
+    <a href="mailto:karnani@mit.edu">karnani@mit.edu</a>
+    <a href="https://scholar.google.com/citations?user=arqpgW0AAAAJ">Google Scholar</a>
+    -->
+    <a href="https://economics.mit.edu/people/phd-students/mohit-karnani">MIT Website</a>
+  </p>
+
+  <div class="bio">
+    <p>I am a Postdoctoral Researcher at Harvard University, where I am a Taubman Fellow at <a href="https://www.hks.harvard.edu/">HKS</a> and <a href="https://www.fas.harvard.edu/">FAS</a>. I completed my PhD in <a href="https://economics.mit.edu/">Economics</a> and <a href="https://idss.mit.edu/">Statistics</a> at MIT, advised by <a href="https://economics.mit.edu/people/faculty/esther-duflo">Esther Duflo</a> and <a href="https://economics.mit.edu/people/faculty/parag-pathak">Parag Pathak</a>. Before that, I studied at the <a href="https://econ.uchile.cl/">University of Chile</a>, where I was an Instructor, and worked at the <a href="https://www.nber.org/">National Bureau of Economic Research (NBER)</a> and <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a> as a Predoctoral Fellow.</p>
+    <!--
+    <p>I work on development economics and empirical market design. I am interested in how the rules of a market or a public program shape who gets what, especially when human capital is at stake: how cash transfers interact with the market power of local retailers, what the lotteries built into centralized school choice can teach us about peer effects and program evaluation, and how to recruit talented students into teaching. My work pairs field experiments with administrative data and structural models, along with newly developed econometric methods.</p>
+    -->
+    <p class="fields">Fields: development economics, empirical market design, economics of education.</p>
+  </div>
+
+  <nav class="nav" aria-label="Sections">
+    <a href="#jmp">Research</a><a href="#teaching">Teaching</a><a href="#awards">Awards</a><a href="#service">Service</a><a href="#references">References</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="jmp" aria-labelledby="jmp-h">
+  <h2 id="jmp-h">Job Market Paper</h2>
+  <div>
+    <article class="paper jmp" id="cash-transfers">
+      <h3><a href="jmp.pdf">Market Power and the Supply-Side of Cash Transfers: Experimental Evidence from Chile</a></h3>
+      <p class="by">with Claudia Mart&iacute;nez A. and Jos&eacute; Tessada</p>
+      <p class="where"><a href="jmp.pdf">Latest draft<span class="vh"> of the job market paper</span> (PDF)</a></p>
+      <!--
+      <p class="lede">Cash transfers paid through a digital wallet led retailers to raise prices by about 9%, but much less so where more of their competitors also accepted the wallet. Keeping local markets competitive is central to designing effective cash transfer programs.</p>
+      -->
+      <details class="abs" open>
+        <summary>Abstract</summary>
+        <div>
+          <p>This paper studies the impacts of a cash transfer program on local businesses. We conducted a two-stage RCT in a Chilean municipality, transferring funds to the poorest 1/3 of households. We transferred these funds through a novel digital wallet with restricted redemption, so that households could use the proceeds only at participating local retailers. We randomly encouraged local businesses to join the digital wallet platform, so they could sell to households using this new payment method. We also randomized the fraction of firms treated at the local-market level to measure the supply-side responses to these cash transfers under different levels of market saturation. Firms respond to local cash transfers, increasing prices by about 9% and reducing competitive monitoring. However, retailers facing more competitive markets attenuated their price increases: a 10pp increase in the fraction of substitute retailers reduces prices by 3.4%. These results suggest that limiting local market power may avoid unintended price effects in the context of cash transfer programs. Finally, we estimate a structural model describing the use of and competition for cash transfers, identified using the experimental variation and transaction-level microdata. We use these estimates to run counterfactual exercises that evaluate the impact of different program designs on prices and welfare. Our estimates suggest markups average about 13% and most of the benefits of competition are achieved with a 60% participation rate within the wallet ecosystem.</p>
+        </div>
+      </details>
+    </article>
+  </div>
+</section>
+
+<section id="publications" aria-labelledby="pub-h">
+  <h2 id="pub-h">Publications</h2>
+  <div>
+    <article class="paper" id="aftermarket">
+      <h3><a href="https://doi.org/10.1086/729068">Aftermarket Frictions and the Cost of Off-Platform Options in Centralized Assignment Mechanisms</a></h3>
+      <p class="by">with Adam Kapor and Christopher Neilson</p>
+      <p class="where"><cite>Journal of Political Economy</cite>, 2024, 132(7): 2346&ndash;2395 &middot; <a href="https://www.nber.org/papers/w30257">NBER Working Paper 30257</a></p>
+      <details class="abs">
+        <summary>Abstract</summary>
+        <div>
+          <p>We study the welfare and human capital impacts of colleges&rsquo; (non)participation in Chile&rsquo;s centralized higher-education platform, leveraging administrative data and two policy changes: the introduction of a large scholarship program and the inclusion of additional institutions, which raised the number of on-platform slots by approximately 40%. We first show that the expansion of the platform raised on-time graduation rates. We then develop and estimate a model of college applications, offers, wait lists, matriculation, and graduation. When the platform expands, welfare increases, and welfare, enrollment, and graduation rates are less sensitive to off-platform frictions. Gains are larger for students from lower-socioeconomic-status backgrounds.</p>
+        </div>
+      </details>
+    </article>
+
+    <article class="paper" id="holiday-travel">
+      <h3><a href="https://doi.org/10.1038/s41591-021-01487-3">Effects of a Large-Scale Social Media Advertising Campaign on Holiday Travel and COVID-19 Infections: A Cluster Randomized Controlled Trial</a></h3>
+      <p class="by">with Emily Breza, Fatima Cody Stanford, Marcella Alsan, Burak Alsan, Abhijit Banerjee, Arun G. Chandrasekhar, Sarah Eichmeyer, Traci Glushko, Paul Goldsmith-Pinkham, Kelly Holland, Emily Hoppe, Sarah Liegl, Tristan Loisel, Lucy Ogbu-Nwobodo, Benjamin A. Olken, Carlos Torres, Pierre-Luc Vautrey, Erica T. Warner, Susan Wootton and Esther Duflo</p>
+      <p class="where"><cite>Nature Medicine</cite>, 2021, 27(9): 1622&ndash;1628 &middot; <a href="https://www.nber.org/papers/w29021">NBER Working Paper 29021</a></p>
+      <details class="abs">
+        <summary>Abstract</summary>
+        <div>
+          <p>During the Coronavirus Disease 2019 (COVID-19) epidemic, many health professionals used social media to promote preventative health behaviors. We conducted a randomized controlled trial of the effect of a Facebook advertising campaign consisting of short videos recorded by doctors and nurses to encourage users to stay at home for the Thanksgiving and Christmas holidays. We randomly assigned counties to high intensity or low intensity. The intervention was delivered to a large fraction of Facebook subscribers in 75% and 25% of randomly assigned zip codes in high- and low-intensity counties, respectively. In total, 6,998 (6,716) zip codes were included, and 11,954,109 (23,302,290) users were reached at Thanksgiving (Christmas). The first two primary outcomes were holiday travel and fraction leaving home, both measured using mobile phone location data of Facebook users. Average distance traveled in high-intensity counties decreased by &minus;0.993 percentage points for the 3 days before each holiday compared to low-intensity counties. The fraction of people who left home on the holiday was not significantly affected. The third primary outcome was COVID-19 infections recorded at the zip code level in the 2-week period starting 5 days after the holiday. Infections declined by 3.5% in intervention compared to control zip codes. Social media messages recorded by health professionals before the winter holidays in the United States led to a significant reduction in holiday travel and subsequent COVID-19 infections.</p>
+        </div>
+      </details>
+    </article>
+
+    <article class="paper" id="physician-messages">
+      <h3><a href="https://doi.org/10.1001/jamanetworkopen.2021.17115">Effect of Physician-Delivered COVID-19 Public Health Messages and Messages Acknowledging Racial Inequity on Black and White Adults&rsquo; Knowledge, Beliefs, and Practices Related to COVID-19: A Randomized Clinical Trial</a></h3>
+      <p class="by">with Carlos Torres, Lucy Ogbu-Nwobodo, Marcella Alsan, Fatima Cody Stanford, Abhijit Banerjee, Emily Breza, Arun G. Chandrasekhar, Sarah Eichmeyer, Tristan Loisel, Paul Goldsmith-Pinkham, Benjamin A. Olken, Pierre-Luc Vautrey, Erica Warner and Esther Duflo</p>
+      <p class="where"><cite>JAMA Network Open</cite>, 2021, 4(7): e2117115</p>
+      <details class="abs">
+        <summary>Abstract</summary>
+        <div>
+          <p>Do messages delivered by physicians increase COVID-19 knowledge and improve preventive behaviors among White and Black individuals? In this randomized clinical trial of 18,223 White and Black adults, a message delivered by a physician increased COVID-19 knowledge and shifted information-seeking and self-protective behaviors. Effects did not differ by race, and tailoring messages to specific communities did not exhibit a differential effect on knowledge or individual behavior. These findings suggest that physician messaging campaigns may be effective in persuading members of society from a broad range of backgrounds to seek information and adopt preventive behaviors to combat COVID-19.</p>
+        </div>
+      </details>
+    </article>
+
+    <article class="paper" id="sudden-stops">
+      <h3><a href="https://doi.org/10.1016/j.jimonfin.2019.04.010">Sudden Stops of Capital Flows: Do Foreign Assets Behave Differently from Foreign Liabilities?</a></h3>
+      <p class="by">with Manuel R. Agosin and Juan D. D&iacute;az</p>
+      <p class="where"><cite>Journal of International Money and Finance</cite>, 2019, 96: 28&ndash;36</p>
+      <details class="abs">
+        <summary>Abstract</summary>
+        <div>
+          <p>We study the determinants of sudden stops in capital flows to emerging markets. Using gross international asset and liability flows (from the point of view of domestic residents), we identify three types of situations: countries that do not experience any type of sudden stops; those who experience a sudden stop in inflows (liabilities), but no sudden stop in their net financial account of the balance of payments; and countries who suffer a sudden stop in inflows and in their net financial account. Based on these three events, we estimate a multinomial logit model and obtain two important results. We find that developed countries have about the same probability of experiencing sudden stops in gross capital inflows as emerging economies. Moreover, the probability of experiencing a sudden stop in gross inflows that winds up becoming a sudden stop in the financial account is affected by the behavior of a country&rsquo;s international assets: countries whose agents possess assets abroad tend to repatriate them during periods of sudden stops in inflows, while the economies of countries whose agents do not possess foreign assets are much more sensitive to the behavior of foreign investors: a sudden stop in inflows can have very adverse effects on output and employment.</p>
+        </div>
+      </details>
+    </article>
+  </div>
+</section>
+
+<section id="working-papers" aria-labelledby="wp-h">
+  <h2 id="wp-h">Working Papers</h2>
+  <div>
+    <p class="tools"><button type="button" id="toggle-abstracts">Expand all abstracts</button></p>
+
+    <article class="paper" id="peer-effects">
+      <h3><a href="#">Peer Effects in Matching Systems and the Effects of Immigrant Classmates on Native Students</a></h3>
+      <p class="where"><a href="#">Draft coming soon<span class="vh"> of Peer Effects in Matching Systems</span> (PDF)</a></p>
+      <details class="abs">
+        <summary>Abstract</summary>
+        <div>
+          <p>This paper studies the estimation of peer effects in centralized school choice systems. These centralized assignment mechanisms often ration seats by lottery, and thus classroom composition and the presence of certain types of peers in a cohort can be the result of a random assignment process. We show how this random variation can be exploited to identify peer effects. The estimator relies on two different propensity scores that can be extracted from a general class of centralized matching mechanisms, and it emulates the setting of a stratified clustered randomized experiment. We use this approach to study the impact of immigrant classmates on native children in Chile&rsquo;s public school system. Our findings suggest that the presence of immigrant classmates has no significant impact on native children&rsquo;s academic achievement, but it does reduce reported victimization by classmates and boosts reports of other prosocial attitudes. Additionally, we find that students already enrolled in a school whose grade receives a migrant entrant are more likely to remain enrolled in that school. These results provide insights into the dynamics of peer effects in educational settings and have implications for policy design in school assignment systems.</p>
+        </div>
+      </details>
+    </article>
+
+    <article class="paper" id="interference">
+      <h3><a href="downloads/rct_interference_matching.pdf">RCTs with Interference in Matching Systems</a></h3>
+      <p class="where"><a href="downloads/rct_interference_matching.pdf">Draft<span class="vh"> of RCTs with Interference in Matching Systems</span> (PDF)</a></p>
+      <details class="abs">
+        <summary>Abstract</summary>
+        <div>
+          <p>This paper studies the estimation of treatment effects using data from randomized controlled trials (RCTs) in the context of matching systems, such as centralized school choice systems. If treated units change their inputs (e.g. reported preferences), they can affect the allocation outcomes determined by the matching system in equilibrium. When the outcome of interest is determined in equilibrium (e.g. being matched to a target school), conventional estimators that compare a treatment group against a control group fail to account for violations of the stable unit treatment value assumption (SUTVA) induced by the matching system. Therefore, they yield biased and inconsistent estimates of the average treatment effect on the treated (ATT), even under perfect randomization designs. I propose an estimator that decomposes the observed average difference between the outcomes of the treatment and control units, and consistently estimates the ATT, along with the residual spillover effect. This nonparametric estimator relies on the matching mechanism satisfying a version of the equal treatment of equals (ETE) property. Moreover, the ATT is identified for any counterfactual fraction of treated units, which allows for the estimation of treatment effects under scaled interventions. I illustrate the applicability of this estimator using data on the Chilean centralized school choice system and the Ecuadorian teacher labor market.</p>
+        </div>
+      </details>
+    </article>
+
+    <article class="paper" id="harlem-charters">
+      <h3><a href="https://www.hks.harvard.edu/publications/charter-school-expansion-and-achievement-evidence-harlem-1999-2025">Charter School Expansion and Achievement: Evidence from Harlem, 1999-2025</a></h3>
+      <p class="by">with Paul E. Peterson</p>
+      <p class="where"><a href="https://www.hks.harvard.edu/publications/charter-school-expansion-and-achievement-evidence-harlem-1999-2025">PEPG Working Paper 26-07</a></p>
+      <!--
+      <a href="downloads/karnani_harlem_charters.pdf">Draft<span class="vh"> of Charter School Expansion and Achievement: Evidence from Harlem, 1999-2025</span> (PDF)</a> &middot; 
+      -->
+      <details class="abs">
+        <summary>Abstract</summary>
+        <div>
+          <p>We estimate community-wide effects on student achievement, as measured by performance on New York State proficiency tests, of charter school expansions in Harlem. Synthetic difference-in-differences (SDID) models estimate trends before and after enactment of the 2007 New York Charter Schools Act amendment, an exogenous supply shock that doubled the limit on the number of charter schools throughout the state, including an additional 50 in New York City. Approximately 400 weighted control schools with near identical pre-treatment trends in test scores are selected from 50 large urban districts in the state. Harlem’s charter enrollment share increased from 11% in 2007 to 47% in 2019, as compared to minimal change in the comparison districts. Post-enactment, Harlem’s ELA and Math proficiency rates, relative to those at the synthetic counterfactual, each rose by 13.8 percentage points. Both charter and district sectors contributed to these gains, though the largest gains came from the charter sector.</p>
+        </div>
+      </details>
+    </article>
+
+    <article class="paper" id="teacher-colleges">
+      <h3><a href="https://hceconomics.uchicago.edu/research/working-paper/screening-and-recruiting-talent-teacher-colleges-using-pre-college-academic">Screening and Recruiting Talent at Teacher Colleges Using Pre-College Academic Achievement</a></h3>
+      <p class="by">with Franco Calle, Sebasti&aacute;n Gallegos and Christopher Neilson</p>
+      <p class="where"><a href="https://hceconomics.uchicago.edu/research/working-paper/screening-and-recruiting-talent-teacher-colleges-using-pre-college-academic">HCEO Working Paper 2022-004</a></p>
+      <!--
+      <a href="downloads/karnani_teacher_colleges.pdf">Draft<span class="vh"> of Screening and Recruiting Talent at Teacher Colleges</span> (PDF)</a> &middot; 
+      -->
+      <details class="abs">
+        <summary>Abstract</summary>
+        <div>
+          <p>This paper studies screening and recruiting policies that restrict or incentivize entry to teacher-colleges. Using historical records of college entrance exam scores since 1967 and linking them to administrative data on the population of teachers in Chile, we first document a robust positive and concave relationship between precollege academic achievement and several short and long run measures of teacher productivity. We use an RD design to evaluate two recent policies that increased the share of high-scoring students studying to become teachers. We then show how data-driven algorithms and administrative data can enhance similar teacher screening and recruiting policies.</p>
+        </div>
+      </details>
+    </article>
+  </div>
+</section>
+
+<section id="in-progress" aria-labelledby="wip-h">
+  <h2 id="wip-h">In Progress</h2>
+  <div>
+    <article class="paper" id="housing">
+      <h3>Long-Run Effects of Housing Improvements on Labor, Education and Health Outcomes of Families: Evidence from a Nationwide Field Experiment in Chile</h3>
+      <p class="by">with Dante Contreras, Ryan Cooper and Natalia Vald&eacute;s</p>
+    </article>
+  </div>
+</section>
+
+<section id="teaching" aria-labelledby="teaching-h">
+  <h2 id="teaching-h">Teaching</h2>
+  <div>
+    <ul class="dated">
+      <li><span class="yr">2026</span><span>The Political Economy of the School, Harvard Kennedy School <small>Teaching fellow for Paul E. Peterson</small></span></li>
+      <li><span class="yr">2024</span><span>The Politics of American Education, Harvard College <small>Teaching fellow for Paul E. Peterson</small></span></li>
+      <li><span class="yr">2021&ndash;22</span><span>Principles of Microeconomics, MIT <small>Head teaching assistant for Sara Fisher Ellison, two semesters</small></span></li>
+      <li><span class="yr">2021</span><span>Market Design, MIT <small>Teaching assistant for Parag Pathak</small></span></li>
+      <li><span class="yr">2016&ndash;18</span><span>Instructor, Department of Economics, University of Chile <small>Sole lecturer for ten undergraduate courses in introductory economics, macroeconomics and mathematics, and co-lecturer for two graduate courses in economic development. Best instructor award on both years.</small></span></li>
+      <li><span class="yr">2013&ndash;17</span><span>Teaching assistant for 26 courses, University of Chile <small>Mathematics, statistics, econometrics, microeconomics, labor economics and public-private partnerships, at the undergraduate and graduate level</small></span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="awards" aria-labelledby="awards-h">
+  <h2 id="awards-h">Fellowships, Grants and Awards</h2>
+  <div>
+    <ul class="dated">
+      <li><span class="yr">2026</span><span>Full Research Grant, Bloomberg Center for Cities, Harvard University</span></li>
+      <li><span class="yr">2026</span><span>AI Experimentation Grant, Cosmos Institute</span></li>
+      <li><span class="yr">2025&ndash;27</span><span>RIS Data Grant, Ministry of Social Development and Family, Government of Chile</span></li>
+      <li><span class="yr">2022&ndash;25</span><span>IHS Fund for Scholars and Junior Fellowship, Institute for Humane Studies</span></li>
+      <li><span class="yr">2023</span><span>MIT-Pillar AI Collective grant, MIT School of Engineering</span></li>
+      <li><span class="yr">2022&ndash;23</span><span>Jerry A. Hausman Dissertation Fellowship, MIT Economics</span></li>
+      <li><span class="yr">2022&ndash;23</span><span>Global Priorities Fellowship, University of Oxford</span></li>
+      <li><span class="yr">2019&ndash;23</span><span>George and Obie Shultz Fund, MIT Economics</span></li>
+      <li><span class="yr">2018&ndash;20</span><span>Castle Krob International Fellowship, MIT Economics</span></li>
+      <li><span class="yr">2017</span><span>Winner, Open Data Challenge, International Initiative for Impact Evaluation (3ie)</span></li>
+      <li><span class="yr">2017</span><span>Best Graduated Engineer, Chilean Engineers Association</span></li>
+      <li><span class="yr">2016</span><span>National Master&rsquo;s Scholarship, CONICYT, Government of Chile</span></li>
+      <li><span class="yr">2016</span><span>Best Poster Award, Chilean Economics Society (SECHI); highest GPA of the cohort, Economics, University of Chile</span></li>
+      <li><span class="yr">2011</span><span>National Champion, National Mathematics Championship (Chile)</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="service" aria-labelledby="service-h">
+  <h2 id="service-h">Service</h2>
+  <div>
+    <p>Referee for <cite>Econometrica</cite>, <cite>American Economic Review</cite>, <cite>American Economic Journal: Economic Policy</cite>, <cite>Review of Economics and Statistics</cite>, <cite>Journal of Labor Economics</cite>, <cite>Journal of Applied Econometrics</cite>, <cite>Journal of International Money and Finance</cite>, <cite>Journal of Econometric Methods</cite>, <cite>Journal of Behavioral and Experimental Finance</cite>.</p>
+    <p>At Harvard I serve on the Postdoctoral Association Events Committee and am the founding organizer of the Empirical Methods in Education Reading Group (both since 2024). At MIT I was treasurer of the Institute for Data, Systems and Society, the Graduate Economics Association, the LatinX Graduate Students Association and Ashdown House, co-organized the Development Lunch, and served as a Graduate Resident Advisor and on the Beyond MIT presidential task force.</p>
+  </div>
+</section>
+
+<section id="references" aria-labelledby="refs-h">
+  <h2 id="refs-h">References</h2>
+  <div>
+    <ul class="refs">
+      <li><a href="https://economics.mit.edu/people/faculty/esther-duflo">Esther Duflo</a><span class="aff">MIT &middot; <a href="mailto:eduflo@mit.edu">eduflo@mit.edu</a></span></li>
+      <li><a href="https://economics.mit.edu/people/faculty/parag-pathak">Parag Pathak</a><span class="aff">MIT &middot; <a href="mailto:ppathak@mit.edu">ppathak@mit.edu</a></span></li>
+      <li><a href="https://www.hks.harvard.edu/faculty/paul-peterson">Paul E. Peterson</a><span class="aff">Harvard University &middot; <a href="mailto:ppeterso@gov.harvard.edu">ppeterso@gov.harvard.edu</a></span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="bar"><a href="downloads/Karnani_CV.pdf">CV</a><a rel="me" href="https://scholar.google.com/citations?user=arqpgW0AAAAJ">Google Scholar</a><a rel="me" href="https://github.com/mohitkarnani">GitHub</a><a rel="me" href="https://www.linkedin.com/in/mohitkarnani">LinkedIn</a></p>
+</footer>
+
+</div>
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+(function () {
+  document.documentElement.classList.add('js');
 
-  ga('create', 'UA-71893518-1', 'auto');
-  ga('send', 'pageview');
+  var abstracts = document.querySelectorAll('details.abs');
+  var toggle = document.getElementById('toggle-abstracts');
+  var allOpen = false;
 
+  toggle.addEventListener('click', function () {
+    allOpen = !allOpen;
+    for (var i = 0; i < abstracts.length; i++) abstracts[i].open = allOpen;
+    toggle.textContent = allOpen ? 'Collapse abstracts' : 'Expand all abstracts';
+  });
+
+  // a link to a paper (e.g. #interference) lands on it with the abstract already open
+  function openFromHash() {
+    if (!location.hash) return;
+    var el = document.getElementById(location.hash.slice(1));
+    var d = el && el.querySelector('details.abs');
+    if (d) d.open = true;
+  }
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
+
+  // print with every abstract visible, then put things back
+  var before;
+  window.addEventListener('beforeprint', function () {
+    before = [];
+    for (var i = 0; i < abstracts.length; i++) { before.push(abstracts[i].open); abstracts[i].open = true; }
+  });
+  window.addEventListener('afterprint', function () {
+    if (!before) return;
+    for (var i = 0; i < abstracts.length; i++) abstracts[i].open = before[i];
+    before = null;
+  });
+
+  // light/dark switch: light unless the reader asks for dark; the choice is kept for this tab
+  var root = document.documentElement;
+  var sw = document.getElementById('theme');
+  function isDark() { return root.getAttribute('data-theme') === 'dark'; }
+  function paint() {
+    var dark = isDark();
+    sw.classList.toggle('dark', dark);
+    sw.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', dark ? '#223d4a' : '#ffffff');
+  }
+  sw.addEventListener('click', function () {
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { sessionStorage.setItem('theme', next); } catch (e) {}
+    paint();
+  });
+  paint();
+})();
 </script>
-
-</head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="material-icons">school</i>  <span class="light">Mohit</span> Karnani
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#vita">Vita</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#research">Research</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#db">Data</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#random">Teaching</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#mem155">Random</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Mohit Karnani</h1>
-                        <p class="intro-text">Personal page.</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Me</h2>
-		<p>I am a Postdoctoral Researcher at <a href="https://www.harvard.edu/">Harvard</a>.</p>
-		<p>I graduated from <a href="https://web.mit.edu/">MIT</a> with a PhD in <a href="https://economics.mit.edu/">Economics</a> and <a href="https://stat.mit.edu/">Statistics</a>, where I was advised by <a href="https://economics.mit.edu/faculty/eduflo">Esther Duflo</a> and <a href="https://economics.mit.edu/faculty/ppathak">Parag Pathak</a>.</p>
-		<p>I fancy topics related to Development Economics, Empirical IO/Market Design, and Education/Labor Economics. Additionally, I am interested in Econometrics and Causal Inference.</p>
-		<p>Previously, I was an Instructor at <a href="http://www.econ.uchile.cl/">Universidad de Chile</a>. I also worked at <a href="http://www.nber.org/">The National Bureau of Economic Research (NBER)</a> and <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a> as a Predoctoral Fellow.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="vita" class="content-section text-center">
-        <div class="vita-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Curriculum Vitae</h2>
-                    <p>You can download my CV here:</p>
-                    <a href="downloads/mohit_karnani_cv.pdf" class="btn btn-default btn-lg" target="_blank">Download CV</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="research" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Research</h2>
-
-                <br>
-
-                <h4>Publications</h4>
-                <p><a href="https://www.journals.uchicago.edu/doi/10.1086/729068"><b>Aftermarket Frictions and the Cost of Off-Platform Options in Centralized Assignment Mechanisms</b></a></p>
-                <p><i>Journal of Political Economy, 2024</i></p>
-                <p><small>(with A. Kapor and C. Neilson)</small></p>
-
-                <br>
-
-                <p><a href="https://www.nature.com/articles/s41591-021-01487-3"><b>Effects of a Large-Scale Social Media Advertising Campaign on Holiday Travel and COVID-19 Infections: A Cluster Randomized Controlled Trial</b></a></p>
-                <p><i>Nature Medicine, 2021</i></p>
-                <p><small>(with E. Breza, F. C. Stanford, M. Alsan, B. Alsan, A. Banerjee, A. G. Chandrasekhar, S. Eichmeyer, T. Glushko, P. Goldsmith-Pinkham, K. Holland, E. Hoppe, S. Liegel, T. Loisel, L. Ogbu-Nwobodo, B. Olken, C. Torres, P. Vautrey, E. Warner, S. Wootton, and E. Duflo)</small></p>
-
-                <br>
-
-                <p><a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2781934"><b>Effect of Physician-Delivered COVID-19 Public Health Messages and Messages Acknowledging Racial Inequity on Black and White Adults’ Knowledge, Beliefs, and Practices Related to COVID-19: A Randomized Clinical Trial</b></a></p>
-                <p><i>JAMA Network Open, 2021</i></p>
-                <p><small>(with C. Torres, L. Ogbu-Nwobodo, M. Alsan, F. C. Stanford, A. Banerjee, E. Breza, A. G. Chandrasekhar, S. Eichmeyer, T. Loisel, P. Goldsmith-Pinkham, B. Olken, P. Vautrey, E. Warner and E. Duflo)</small></p>
-
-                <br>
-
-                <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0261560619302426"><b>Sudden Stops of Capital Flows: Do Foreign Assets Behave Differently from Foreign Liabilities?</b></a></p>
-                <p><i>Journal of International Money and Finance, 2019</i></p>
-                <p><small>(with M. Agosin and J. Diaz)</small></p>
-
-                <br>
-
-                <p><a href="https://web.uchile.cl/archivos/VAA/ExperienciasInnovacionDocente/42/"><b>Impact Evaluation of a Freshmen Remedial Math Program: A Regression Discontinuity Approach</b></a></p>
-                <p><i>Experiencias de Innovacion Docente, 2017</i></p>
-                <p><small>(in Spanish)</small></p>
-
-
-
-
-                <br>
-
-                <h4>Working Papers</h4>
-                <p><b>Screening and Recruiting Talent At Teacher Colleges Using Pre-College Academic Achievement</b></p>
-                <p><i>Submitted</i></p>
-                <p><small>(with F. Calle, S. Gallegos and C. Neilson)</small></p>
-
-                <br>
-
-                <p><b>RCTs with Interference in Matching Systems</b></p>
-
-                <br>
-
-                <p><b>Expiring Budgets and Dynamic Competition in Year-End Public Auctions: Theory and Evidence from Chile</b></p>
-
-                <br>
-
-                <p><b>Freshmen Teachers and College Major Choice: Evidence from a Random Assignment in Chile</b></p>
-
-                <br>
-
-                <p><b>Labor Shakes: Mid Run Effects of a Large Earthquake on Regional Unemployment</b></p>
-
-
-
-
-                <br>
-
-                <h4>Work in Progress</h4>
-                <p><b>Foreign Classmates and Student Outcomes: Evidence from Venezuelan Refugee Migration Waves</b></p>
-                <p><small>(with D. Paz)</small></p>
-
-                <br>
-
-                <p><b>Elite Colleges and Long Run Residential Sorting: Evidence from Centralized College Choice</b></p>
-
-                <br>
-
-                <p><b>Noise-Robust Change-in-Changes Estimation</b></p>
-
-                <br>
-
-                <p><b>Rational and Adaptive Expectations in School Choice: Evidence from Intertemporal College Admission Cutoffs</b></p>
-
-                <br>
-
-                <p><b>Local Cash Transfers, Price Adjustments and Competition: Evidence from a Market-Level Randomized Controlled Trial</b></p>
-                <p><small>(with C. Martinez and J. Tessada)</small></p>
-
-                <br>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section id="db" class="content-section text-center">
-        <div class="db-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Databases</h2>
-                    <p>A small compilation of different public databases in Stata (.dta) format:</p>
-<p>
-                    <a href="downloads/EOD_marzo.zip" class="btn btn-default btn-lg">March's EOD (1980-2014)</a>
-                    <a href="downloads/EOD_junio.zip" class="btn btn-default btn-lg">June's EOD (1957-2015)</a>
-                    <a href="downloads/EOD_septiembre.zip" class="btn btn-default btn-lg">September's EOD (1997-2013)</a>
-                    <a href="downloads/EOD_diciembre.zip" class="btn btn-default btn-lg">December's EOD (1997-2013)</a>
-</p><p>
-                    <a href="downloads/CHI.zip" class="btn btn-default btn-lg">Daily Prices (2007-2012)</a>
-</p><p>
-                    <a href="downloads/PSID.zip" class="btn btn-default btn-lg">PSID (1968-2013)</a>
-</p><p>
-                    <a href="downloads/ELE1.zip" class="btn btn-default btn-lg">ELE1 (2007)</a>
-                    <a href="downloads/ELE2.zip" class="btn btn-default btn-lg">ELE2 (2009)</a>
-                    <a href="downloads/ELE3.zip" class="btn btn-default btn-lg">ELE3 (2012)</a>
-</p><p>
-                    <a href="downloads/CASEN/casen1990.zip" class="btn btn-default btn-lg">CASEN 1990</a>
-                    <a href="downloads/CASEN/casen1992.zip" class="btn btn-default btn-lg">CASEN 1992</a>
-                    <a href="downloads/CASEN/casen1994.zip" class="btn btn-default btn-lg">CASEN 1994</a>
-                    <a href="downloads/CASEN/casen1996.zip" class="btn btn-default btn-lg">CASEN 1996</a>
-                    <a href="downloads/CASEN/casen1998.zip" class="btn btn-default btn-lg">CASEN 1998</a>
-                    <a href="downloads/CASEN/casen2000.zip" class="btn btn-default btn-lg">CASEN 2000</a>
-                    <a href="downloads/CASEN/casen2003.zip" class="btn btn-default btn-lg">CASEN 2003</a>
-                    <a href="downloads/CASEN/casen2006.zip" class="btn btn-default btn-lg">CASEN 2006</a>
-                    <a href="downloads/CASEN/casen2009.zip" class="btn btn-default btn-lg">CASEN 2009</a>
-                    <a href="downloads/CASEN/casen2011.zip" class="btn btn-default btn-lg">CASEN 2011</a>
-                    <a href="downloads/CASEN/casen2013.zip" class="btn btn-default btn-lg">CASEN 2013</a>
-                    <a href="downloads/CASEN/casen2015.zip" class="btn btn-default btn-lg">CASEN 2015</a>
-<p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="random" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Teaching</h2>
-
-<!--                    <h4>ECO756 - Economic Growth and Development: A Policy Approach</h4>
-                    <p>Links to flipped classroom evaluations: <br>
-                    <a href="eco756/FC1.html" class="btn btn-default btn-lg">FC1</a>
-</p>
-<p><br></p>
--->
-                    <h4>MAC205 - Introduction to Macroeconomics</h4>
-
-                    <p>Assignments: <br>
-                    <a href="mac205/hw1.pdf" class="btn btn-default btn-lg">HW1</a>
-                    <a href="mac205/hw2.pdf" class="btn btn-default btn-lg">HW2</a>
-                    <a href="mac205/hw3.zip" class="btn btn-default btn-lg">HW3</a>
-                    <a href="mac205/hw4.zip" class="btn btn-default btn-lg">HW4</a>
-</p>
-
-                    <p>Course Material: <br>
-                    <a href="mac205/course.pdf" class="btn btn-default btn-lg">Slides</a>
-                    <a href="mac205/course_handout.pdf" class="btn btn-default btn-lg">Slides (Handout)</a>
-</p>
-
-                    <p>Evaluation Forms: <br>
-                    <a href="mac205/Lecture.html" class="btn btn-default btn-lg">Lecture Evaluation</a>
-                    <a href="mac205/TA.html" class="btn btn-default btn-lg">TA Evaluation</a>
-</p>
-<p><br></p>
-
-                    <h4>MEM155 - Mathematical Methods II</h4>
-                    <p>Links to different problems and solutions: <br>
-                    <a href="mem155/P1.html" class="btn btn-default btn-lg">P1</a>
-                    <a href="mem155/P2.html" class="btn btn-default btn-lg">P2</a>
-                    <a href="mem155/P3.html" class="btn btn-default btn-lg">P3</a>
-                    <a href="mem155/P4.html" class="btn btn-default btn-lg">P4</a>
-                    <a href="mem155/P5.html" class="btn btn-default btn-lg">P5</a>
-                    <a href="mem155/P6.html" class="btn btn-default btn-lg">P6</a>
-                    <a href="mem155/P7.html" class="btn btn-default btn-lg">P7</a>
-                    <a href="mem155/P8.html" class="btn btn-default btn-lg">P8</a>
-                    <a href="mem155/P9.html" class="btn btn-default btn-lg">P9</a>
-                    <a href="mem155/P10.html" class="btn btn-default btn-lg">P10</a>
-                    <a href="mem155/P11.html" class="btn btn-default btn-lg">P11</a>
-                    <a href="mem155/P12.html" class="btn btn-default btn-lg">P12</a>
-                    <a href="mem155/P13.html" class="btn btn-default btn-lg">P13</a>
-                    <a href="mem155/P14.html" class="btn btn-default btn-lg">P14</a>
-                    <a href="mem155/P15.html" class="btn btn-default btn-lg">P15</a>
-                    <a href="mem155/P16.html" class="btn btn-default btn-lg">P16</a>
-                    <a href="mem155/P17.html" class="btn btn-default btn-lg">P17</a>
-                    <a href="mem155/P18.html" class="btn btn-default btn-lg">P18</a>
-                    <a href="mem155/P19.html" class="btn btn-default btn-lg">P19</a>
-                    <a href="mem155/P20.html" class="btn btn-default btn-lg">P20</a>
-                    <a href="mem155/P21.html" class="btn btn-default btn-lg">P21</a>
-                    <a href="mem155/P22.html" class="btn btn-default btn-lg">P22</a>
-</p>
-
-                    <p>Course Material: <br>
-                    <a href="mem155/course.pdf" class="btn btn-default btn-lg">Slides</a>
-                    <a href="mem155/course_handout.pdf" class="btn btn-default btn-lg">Slides (Handout)</a>
-                    <!-- <a href="mem155/ebook.pdf" class="btn btn-default btn-lg">Booklet</a> -->
-</p>
-
-                    <p>Evaluation Forms: <br>
-                    <a href="mem155/Lecture.html" class="btn btn-default btn-lg">Lecture Evaluation</a>
-                    <a href="mem155/TA.html" class="btn btn-default btn-lg">TA Evaluation</a>
-</p>
-
-<p><br></p>
-                    <h4>ECO105 - Introduction to Economics</h4>
-                    <p>Links to short evaluations: <br>
-                    <a href="eco105/MOD1.html" class="btn btn-default btn-lg">MOD1</a>
-                    <a href="eco105/MOD2.html" class="btn btn-default btn-lg">MOD2</a>
-                    <a href="eco105/MOD3.html" class="btn btn-default btn-lg">MOD3</a>
-                    <a href="eco105/MOD4.html" class="btn btn-default btn-lg">MOD4</a>
-                    <a href="eco105/MOD5.html" class="btn btn-default btn-lg">MOD5</a>
-                    <a href="eco105/MOD7.html" class="btn btn-default btn-lg">MOD7</a>
-                    <a href="eco105/MOD8.html" class="btn btn-default btn-lg">MOD8</a>
-</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="mem155" class="content-section text-center">
-        <div class="mem155-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                <h2>Random Quote</h2>
-<p><script language="JavaScript">
-	var Cita=new Array()
-	Cita[1]="Not everything that can be counted counts, and not everything that counts can be counted. <br> <em>William Bruce Cameron</em>";
-	Cita[2]="Courage doesn't always roar. Sometimes courage is the quiet voice at the end of the day whispering, 'I will try again tomorrow.' <br> <em>Mary Anne Radmacher</em>";
-	Cita[3]="Ever tried. Ever failed. No matter. Try again. Fail again. Fail better. <br> <em>Samuel Beckett</em>";
-	Cita[4]="You miss 100% of the shots you don't take. <br> <em>Wayne Gretzky</em>";
-	Cita[5]="When the wind of change blows, some build walls while others build windmills. <br> <em>Chinese Proverb</em>";
-	Cita[6]="We make a living by what we get. We make a life by what we give. <br> <em>Winston Churchill</em>";
-	Cita[7]="Everybody is a genius. But, if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid. <br> <em>Albert Einstein</em>";
-	Cita[8]="Economics has never been a science; and it is even less now than a few years ago. <br> <em>Paul Samuelson</em>";
-	Cita[9]="The only function of economic forecasting is to make astrology look respectable. <br> <em>John Kenneth Galbraith</em>";
-	Cita[10]="95% of Economics is common sense deliberately made complicated. <br> <em>Ha-Joon Chang</em>";
-	Cita[11]="In my youth it was said that what was too silly to be said may be sung. In modern economics it may be put into mathematics. <br> <em>Ronald Coase</em>";
-	Cita[12]="The great virtue of a free market system is that it... is the most effective system we have discovered to enable people who hate one another to deal with one another and help one another. <br> <em>Milton Friedman</em>";
-	Cita[13]="The best teachers are those who show you where to look, but don't tell you what to see. <br> <em>Alexandra K. Trenfor</em>";
-	Cita[14]="Earth provides enough to satisfy every man's need, but not every man's greed. <br> <em>Mahatma Gandhi</em>";
-	Cita[15]="What we know about the global financial crisis is that we don't know very much. <br> <em>Paul Samuelson</em>";
-	Cita[16]="We must lay hold of the fact that economic laws are not made by nature. They are made by human beings. <br> <em>Franklin Delano Roosevelt</em>";
-	Cita[17]="In Economics, the majority is always wrong. <br> <em>John Kenneth Galbraith</em>";
-	Cita[18]="Muddy water is best cleared by leaving it alone. <br> <em>Alan Watts</em>";
-	Cita[19]="Remember that not getting what you want is sometimes a wonderful stroke of luck. <br> <em>Dalai Lama</em>";
-	Cita[20]="Today I will do what others won't, so tomorrow I can do what others can't. <br> <em>Jerry Rice</em>";
-	Cita[21]="In times of change, learners inherit the earth, while the learned find themselves beautifully equipped to deal with a world that no longer exists. <br> <em>Eric Hoffer</em>";
-	Cita[22]="There ain't no such thing as a free lunch. <br> <em>Robert A. Heinlein</em>";
-	Cita[23]="Rejection is an opportunity for your selection. <br> <em>Bernard Branson</em>";
-	Cita[24]="It's a fact that men make more money than women. That's why I became a man. Best decision of my life. <br> <em>Jarod Kintz</em>";
-	Cita[25]="There's class warfare, all right, but it's my class, the rich class, that's making war, and we're winning. <br> <em>Warren Buffett</em>";
-	Cita[26]="If you are rich, you have to be an idiot not to stay rich. And if you are poor, you have to be really smart to get rich. <br> <em>John Green</em>";
-	Cita[27]="The time to repair the roof is when the sun is shining. <br> <em>John F. Kennedy</em>";
-	Cita[28]="If you owe your bank a hundred pounds, you have a problem. But if you owe a million, it has. <br> <em>John Maynard Keynes</em>";
-	Cita[29]="Anyone who believes that exponential growth can go on forever in a finite world is either a madman or an economist. <br> <em>Kenneth E. Boulding</em>";
-	Cita[30]="A society can be Pareto optimal and still perfectly disgusting. <br> <em>Amartya Sen</em>";
-	Cita[31]="Economics is extremely useful as a form of employment for economists. <br> <em>John Kenneth Galbraith</em>";
-	Cita[32]="An economist is an expert who will know tomorrow why the things he predicted yesterday didn't happen today. <br> <em>Laurence J. Peter</em>";
-	Cita[33]="In the long run we are all dead. <br> <em>John Maynard Keynes</em>";
-	Cita[34]="One of the greatest pieces of economic wisdom is to know what you do not know. <br> <em>John Kenneth Galbraith</em>";
-	Cita[35]="Great things are done by a series of small things brought together. <br> <em>Vincent Van Gogh</em>";
-	Cita[36]="Never look back unless you are planning to go that way. <br> <em>Henry David Thoreau</em>";
-	Cita[37]="Time you enjoy wasting is not wasted time. <br> <em>John Lennon</em>";
-	Cita[38]="Knowing is not enough, we must apply. Willing is not enough, we must do. <br> <em>Bruce Lee</em>";
-	Cita[39]="Dude, suckin' at something is the first step to being sorta' good at something. <br> <em>Jake, 'Adventure Time'</em>";
-	Cita[40]="It's not the years in your life that count. It's the life in your years. <br> <em>Abraham Lincoln</em>";
-	Cita[41]="Rules for happiness: something to do, someone to love, something to hope for. <br> <em>Immanuel Kant</em>";
-	Cita[41]="When you're going through hell, keep going. <br> <em>Winston Churchill</em>";
-	Cita[42]="Time you enjoy wasting is not wasted time. <br> <em>John Lennon</em>";
-	Cita[43]="Do or do not, there is no try. <br> <em>Yoda</em>";
-	var M = Cita.length;
-	var nCita=Math.floor((Math.random()*M)+1);
-	function muestraCita(){document.write(Cita[nCita]);}
-	muestraCita();
-</script></p>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-        <section id="contact" class="container content-section text-center">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Contact Me</h2>
-                    <p>Feel free to contact me on any of these:
-                    </p>
-                    <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="https://twitter.com/MohitK_" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/mohitkarnani" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/mohitkarnani" class="btn btn-default btn-lg"><i class="fa fa-linkedin-square fa-fw"></i> <span class="network-name">LinkedIn</span></a>
-                        </li>
-                        <li>
-                            <a href="https://www.researchgate.net/profile/Mohit_Karnani" class="btn btn-default btn-lg"><i class="ai ai-researchgate-square ai-fw"></i> <span class="network-name">ResearchGate</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-
-    <div id="map"></div>
-
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Mohit Karnani</p>
-        </div>
-    </footer>
-
-    <script src="js/jquery.js"></script>
-
-    <script src="js/bootstrap.min.js"></script>
-
-    <script src="js/jquery.easing.min.js"></script>
-
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmRzwUOPn-a-08ywtQFz91LQpe5-pEDXo&sensor=false"></script>
-
-    <script src="js/grayscale.js"></script>
-
 </body>
-
 </html>
